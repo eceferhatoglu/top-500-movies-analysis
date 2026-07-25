@@ -8,9 +8,9 @@ The analysis builds a chain of targeted questions to challenge initial assumptio
 📁 **Quick Links:**
 * **Source Dataset:** [Kaggle - Top 500 Movies Ranked by Combined Critics & Audience Scores](https://www.kaggle.com/datasets/prashant0kumar7/top-500-movies-ranked-by-combined-critics)
 * **SQL Files:** 
-  * `critic_vs_audience.sql` — Audience score weighting, correlation checks, and critic-vs-audience sentiment comparisons.
-  * `genre_and_temporal_trends.sql` — Top-tier film filtering, genre breakdowns, decadal shifts, and era-control testing.
-  * `popularity_metrics.sql` — Combined vote metrics, volume-vs-quality analysis, and underrated films.
+  * [1_critic_vs_audience.sql](1_critic_vs_audience.sql) — Audience score weighting, correlation checks, and critic-vs-audience sentiment comparisons.
+  * [2.genre_and_temporal_trends.sql](2.genre_and_temporal_trends.sql) — Top-tier film filtering, genre breakdowns, decadal shifts, and era-control testing.
+  * [3_popularity_metrics.sql](3_popularity_metrics.sql) — Combined vote metrics, volume-vs-quality analysis, and underrated films.
 
 
 ## Background
