@@ -27,6 +27,9 @@ The analysis works through a chain of questions, each one built to test or chall
 ## Tools
 * **SQL**: Core language for querying, aggregation, `CASE WHEN` logic, `CORR()`, CTEs, and window-style comparisons.
 * **PostgreSQL**: Database used to host and query the dataset.
+* **VS Code:** Primary code editor used for writing and managing local SQL queries.
+* **GitHub:** Version control platform used to host the repository.
+* **Claude:** AI collaborator utilized to assist with code debugging, query optimization, and quick CSV export analysis.
 
 ## Analysis & Key Findings
 ### 1. Critics vs. Audiences
@@ -52,7 +55,6 @@ Pulling the top 10 per genre:
 Grouping by decade:
 * The 1950s is the best-performing decade; the 2000s is the lowest. Scores decline as decades progress.
 * Because this is a top-N **all-time** list (not a general catalog), the best explanation is **canonization lag** — older films have had more time to build the critical/cultural consensus needed to make an all-time list, while recent films haven't had that time yet.
-* Tested this against a competing "survivorship bias" theory using score variance by decade — variance is actually *lowest* in recent decades, not highest, which doesn't support survivorship. Canonization lag remains the better-supported explanation.
 
 ### 5. Is Drama's Advantage Real, or Just Age?
 Comparing Drama vs. Non-Drama scores *within the same decade* isolates genre from era:
@@ -69,11 +71,9 @@ After building a `total_votes` column (combining critic reviews, audience review
 * The "most underrated" list (high score, <200K votes) is dominated by documentaries and foreign/arthouse films — genres that rarely reach blockbuster vote counts regardless of quality.
 * The full-dataset correlation between votes and score came out to **-0.097** — essentially negligible. Earlier estimates from small curated subsets (up to -0.99 for some genres) were inflated by selection bias, since those subsets were deliberately drawn from the extremes.
 
-
-
 ## Conclusions
-1. **Surface-level genre rankings are misleading without controlling for era.** Drama looks like the "best" genre overall, but most of that advantage disappears once you compare films from the same decade — it's largely an artifact of Drama-tagged films skewing older in a dataset that structurally favors older films.
-2. **"Best of all time" lists reward canonization, not just quality.** Older films dominate because they've had more time to build consensus — not necessarily because filmmaking quality has declined.
-3. **Popularity and critical/audience quality are independent.** High vote counts don't predict high scores, and vice versa — being widely watched and being highly rated are separate phenomena in this dataset.
-4. **Critics and audiences reward different things.** Their scores are only weakly correlated; critics favor consensus prestige picks, audiences favor big cultural and cult favorites.
+1. **Critics and audiences reward different things.** Their scores are only weakly correlated; critics favor consensus prestige picks, audiences favor big cultural and cult favorites.
+2. **Surface-level genre rankings are misleading without controlling for era.** Drama looks like the "best" genre overall, but most of that advantage disappears once you compare films from the same decade — it's largely an artifact of Drama-tagged films skewing older in a dataset that structurally favors older films.
+3. **"Best of all time" lists reward canonization, not just quality.** Older films dominate because they've had more time to build consensus — not necessarily because filmmaking quality has declined.
+4. **Popularity and critical/audience quality are independent.** High vote counts don't predict high scores, and vice versa — being widely watched and being highly rated are separate phenomena in this dataset.
 5. **Small samples can manufacture strong-looking patterns.** Several early "clear" findings (genre correlations up to -0.99, a consistent Drama edge) weakened substantially once tested against larger, less-curated data — a reminder to sanity-check any striking result against sample size before treating it as confirmed.
