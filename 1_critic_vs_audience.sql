@@ -66,7 +66,7 @@ LIMIT 10
 SELECT
     title,
     ROUND((weighted_audience_score::NUMERIC),0),
-    critic_rating_rt
+    critic_rating_rt,
     genre,
     year,
     director,
@@ -129,3 +129,4 @@ SELECT
 FROM movies;
 
 -- A very low number of 0.12 means there is almost no relationship relationship between how critics and audiences rate these films.
+-- CAVEAT: this is a curated top-N dataset (all films already cleared a quality bar), which restricts score range and mechanically weakens correlation
