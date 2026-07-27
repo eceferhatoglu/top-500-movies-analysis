@@ -71,6 +71,10 @@ After building a `total_votes` column (combining critic reviews, audience review
 * The "most underrated" list (high score, <200K votes) is dominated by documentaries and foreign/arthouse films — genres that rarely reach blockbuster vote counts regardless of quality.
 * The full-dataset correlation between votes and score came out to **-0.097** — essentially negligible. Earlier estimates from small curated subsets (up to -0.99 for some genres) were inflated by selection bias, since those subsets were deliberately drawn from the extremes.
 
+## Limitations
+* Critic scores are sourced from Rotten Tomatoes only. RT was chosen because it was the only critic aggregator in the dataset with vote/review counts available — Metacritic lacked this, making it unusable for the weighted-average approach used on the audience side.
+* Both the critic score (Tomatometer) and one component of the audience score (RT's Audience Score) are RT metrics based on % of positive reviews, not a graded numeric average — unlike IMDb and Letterboxd, which are true numeric averages. The weighted audience score therefore blends two different metric types (percentage-positive and numeric average) into a single number, which should be kept in mind when interpreting critic-vs-audience comparisons.
+
 ## Conclusions
 1. **Critics and audiences reward different things.** Their scores are only weakly correlated; critics favor consensus prestige picks, audiences favor big cultural and cult favorites.
 2. **Surface-level genre rankings are misleading without controlling for era.** Drama looks like the "best" genre overall, but most of that advantage disappears once you compare films from the same decade — it's largely an artifact of Drama-tagged films skewing older in a dataset that structurally favors older films.
