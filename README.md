@@ -1,4 +1,6 @@
-# Top Movies Dataset SQL Project
+# Top Movies Dataset SQL & Power BI Project
+
+![Dashboard Görseli](PowerBI/Top_Movies-1.png)
 
 ## Introduction
 This project uses SQL to explore a curated dataset of top-rated movies, looking at how scores, genres, popularity, and critic/audience perception relate to each other.
