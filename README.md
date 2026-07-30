@@ -11,7 +11,7 @@ The analysis builds a chain of targeted questions to challenge initial assumptio
 * **Source Dataset:** [Kaggle - Top 500 Movies Ranked by Combined Critics & Audience Scores](https://www.kaggle.com/datasets/prashant0kumar7/top-500-movies-ranked-by-combined-critics)
 * **SQL Files:** 
   * [1_critic_vs_audience.sql](SQL/1_critic_vs_audience.sql) — Audience score weighting, correlation checks, and critic-vs-audience sentiment comparisons.
-  * [2.genre_and_temporal_trends.sql](SQL/2_genre_and_temporal_trends.sql) — Top-tier film filtering, genre breakdowns, decadal shifts, and era-control testing.
+  * [2_genre_and_temporal_trends.sql](SQL/2_genre_and_temporal_trends.sql) — Top-tier film filtering, genre breakdowns, decadal shifts, and era-control testing.
   * [3_popularity_metrics.sql](SQL/3_popularity_metrics.sql) — Combined vote metrics, volume-vs-quality analysis, and underrated films.
 * **PowerBI dashboard:** A dashboard has been added to this repository. You can check the relevant folders for detailed notes and visual PNG files [here](PowerBI).
 
