@@ -24,7 +24,7 @@ Genres arrive as a comma-separated string, so `unnest` + `TRIM` splits each genr
 
 ## Page: Overview
 
-![Overview page](images/overview.png)
+![Overview page](Top_Movies-1.png)
 
 - KPI cards: movie count, avg critic score, avg audience score, total votes.
 - Top genres bar chart (by film count).
@@ -32,7 +32,7 @@ Genres arrive as a comma-separated string, so `unnest` + `TRIM` splits each genr
 
 ## Page: Critic vs Audience
 
-![Critic vs Audience page](images/critic_vs_audience.png)
+![Critic vs Audience page](Top_Movies-2.png)
 
 - Critics' top 10 / Audience's top 10 tables.
 - "Where critics rate higher" / "Where audience rate higher" diverging bar charts.
@@ -40,7 +40,7 @@ Genres arrive as a comma-separated string, so `unnest` + `TRIM` splits each genr
 
 ## Page: Genre & Era
 
-![Genre and Era page](images/genre_and_era.png)
+![Genre and Era page](Top_Movies-3.png)
 
 - Overall decade trend line chart (full dataset).
 - Drama vs. Non-Drama by decade line chart (using the `genre_group` measure, full dataset — no top-10 filter).
@@ -48,7 +48,7 @@ Genres arrive as a comma-separated string, so `unnest` + `TRIM` splits each genr
 
 ## Page: Popularity
 
-![Popularity page](images/popularity.png)
+![Popularity page](Top_Movies-4.png)
 
 - Total votes (x) vs. total_average_score (y) scatter plot.
 - "Most underrated" table (high score, low votes — skews toward documentary/arthouse by genre).
