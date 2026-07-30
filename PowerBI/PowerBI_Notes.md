@@ -1,6 +1,6 @@
 # Power BI Dashboard Notes
 
-This document covers the Power BI dashboard built on top of the SQL analysis described in the main [README](./README.md). It includes the data import query, Power Query/DAX transformations, and a page-by-page breakdown of the dashboard.
+This document covers the Power BI dashboard built on top of the SQL analysis described in the main README. It includes an SQL import query, measures and calculated columns, and a page-by-page breakdown of the dashboard.
 
 ## Data Import
 
@@ -16,7 +16,7 @@ FROM movies;
 
 Genres arrive as a comma-separated string, so `unnest` + `TRIM` splits each genre into its own row (a single film can appear in multiple genre rows).
 
-## Power Query / DAX
+## DAX
 
 - `Decade_year = ROUNDDOWN(movies[year]/10, 0) * 10` — rounds the release year down to its decade.
 - `genre_group = IF(CONTAINSSTRING('Query3'[clean_genre], "Drama"), "Drama", "Non-Drama")` — binary grouping used for the Drama vs. Non-Drama comparison.
@@ -44,7 +44,6 @@ Genres arrive as a comma-separated string, so `unnest` + `TRIM` splits each genr
 
 - Overall decade trend line chart (full dataset).
 - Drama vs. Non-Drama by decade line chart (using the `genre_group` measure, full dataset — no top-10 filter).
-- **Note:** the README's genre ranking finding (Drama 92.2 vs. Horror/Sci-Fi/Family 86–88) is based on a top-10-per-genre subset. The charts on this page don't reproduce that ranking — they visualize the canonization argument (README sections 4 and 5) instead, using the full dataset. This distinction is called out as text on the page itself.
 
 ## Page: Popularity
 
